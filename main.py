@@ -32,3 +32,5 @@ if __name__ == "__main__":
         data = r.json()
         temperature = data["forecast"]["temp"]
         logger.info(f'Weather in Berlin: {temperature}')
+    else:
+        logger.info(f"No weather data loaded")
