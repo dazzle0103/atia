@@ -45,6 +45,7 @@ if __name__ == "__main__":
     w3.middleware_onion.inject(ExtraDataToPOAMiddleware, layer=0)
     w3.middleware_onion.inject(SignAndSendRawMiddlewareBuilder.build(account), layer=0)
     print("account:", account)
+    print("abi: ", abi)
 
     contract_address = '0x9D3936dBd9A794Ee31eF9F13814233D435bD806C' #atia blessing
     checksumAddress = Web3.to_checksum_address(contract_address)
@@ -60,6 +61,7 @@ if __name__ == "__main__":
     for user in accounts:
         print(user, "checksumaddress:", checksumAddress)
         status = contract.functions.getActivationStatus(Web3.to_checksum_address(user)).call()
+        print("Status:", status)
         if status[1] == False:
             logger.info(f"User: {user} -> Starting Blessing Transaction")
             tx_hash = contract.functions.activateStreak(Web3.to_checksum_address(user)).transact({'from': _from})
