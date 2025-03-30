@@ -3,7 +3,7 @@ name: run main.py
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *' # At 06:00 every day
+    - cron: '5 3 * * *' # At 03:05 every day UTC (at 03:00 bounty reset)
 
 jobs:
   build:
