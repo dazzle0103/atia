@@ -40,12 +40,9 @@ if __name__ == "__main__":
     # assert private_key is not None, "You must set PRIVATE_KEY environment variable"
     # assert private_key.startswith("0x"), "Private key must start with 0x hex prefix"
     w3 = Web3(Web3.HTTPProvider(ronin_rpc))
-    print("ronin_rpc:", ronin_rpc)
     account: LocalAccount = Account.from_key(private_key)
     w3.middleware_onion.inject(ExtraDataToPOAMiddleware, layer=0)
     w3.middleware_onion.inject(SignAndSendRawMiddlewareBuilder.build(account), layer=0)
-    print("account:", account)
-    print("abi: ", abi)
 
     contract_address = '0x9D3936dBd9A794Ee31eF9F13814233D435bD806C' #atia blessing
     checksumAddress = Web3.to_checksum_address(contract_address)
@@ -59,12 +56,11 @@ if __name__ == "__main__":
     ]
     _from = '0x5886Dc1c4F14C5ab8e0E77eb50A3aFE4B0b06761' #dev
     for user in accounts:
-        print(user, "checksumaddress:", checksumAddress)
         status = contract.functions.getActivationStatus(Web3.to_checksum_address(user)).call()
-        print("Status:", status)
         if status[1] == False:
             logger.info(f"User: {user} -> Starting Blessing Transaction")
             tx_hash = contract.functions.activateStreak(Web3.to_checksum_address(user)).transact({'from': _from})
             logger.info(f"User: {user} -> Transaction complete! {tx_hash}")
         else:
             logger.info(f"User: {user} -> Already blessed")
+    logger.info('-' * 80)
