@@ -1,0 +1,8 @@
+2025-03-31 03:25:14,263 - __main__ - INFO - Loading secrets: All secrets loaded
+2025-03-31 03:25:14,654 - __main__ - INFO - User: 0xd3daf3c63cc00b7e178985be0e446ba6f5dcece7 -> Starting Blessing Transaction
+2025-03-31 03:25:16,086 - __main__ - INFO - User: 0xd3daf3c63cc00b7e178985be0e446ba6f5dcece7 -> Transaction complete! b'K\xfdsA\x81\x93M\xf9\x1d$A\x02\'\x17\xa0d\x1ct\xf6\x9e7"\x1eL\xc4+\x9b\xbe\xea\xe1\xc6@'
+2025-03-31 03:25:16,438 - __main__ - INFO - User: 0x99f1ad08af12f51e337643ae8b224bee1a83f4f3 -> Starting Blessing Transaction
+2025-03-31 03:25:17,781 - __main__ - INFO - User: 0x99f1ad08af12f51e337643ae8b224bee1a83f4f3 -> Transaction complete! b'\xa4`EF\xe4\x83\xb7\x06\xbd\x80q\x0f\xd5M\x99\x07\x05\xfb\xcf\xe3p\xca(\xb7a\xae\x83&\xb1\t\xfc\xfd'
+2025-03-31 03:25:18,088 - __main__ - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Starting Blessing Transaction
+2025-03-31 03:25:19,346 - __main__ - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Transaction complete! b'\xaf@C<m\xd82rX\xdc\xaf\x7f\xd0#1%\\\n\xdb\x9cG\\\x07\xf2\x94\xec\xab\x1c \x8d\xf5\x10'
+2025-03-31 03:25:19,346 - __main__ - INFO - --------------------------------------------------------------------------------
