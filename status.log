@@ -99,3 +99,11 @@
 2025-04-11 03:38:05,726 - __main__ - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Starting Blessing Transaction
 2025-04-11 03:38:07,050 - __main__ - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Transaction complete! b'\xc2\x07\x9e"\xe4\xf8\xdc\xc8\xcc\x1ad\xb3\x02\xf0J\xb6\x1a\x8fC\xf7\x00\xf1\xa8XU\x99Bc\xce\x02\x14I'
 2025-04-11 03:38:07,051 - __main__ - INFO - --------------------------------------------------------------------------------
+2025-04-12 03:36:06,381 - __main__ - INFO - Loading secrets: All secrets loaded
+2025-04-12 03:36:06,932 - __main__ - INFO - User: 0xd3daf3c63cc00b7e178985be0e446ba6f5dcece7 -> Starting Blessing Transaction
+2025-04-12 03:36:08,224 - __main__ - INFO - User: 0xd3daf3c63cc00b7e178985be0e446ba6f5dcece7 -> Transaction complete! b'\xf2M`\x0b\x83&m\xe0Y>\x8b\xabCokJ\xbb\xc5\xe4X\xa4\xb5R\x85\xdd\x87\x9d_\xca4\x90)'
+2025-04-12 03:36:08,557 - __main__ - INFO - User: 0x99f1ad08af12f51e337643ae8b224bee1a83f4f3 -> Starting Blessing Transaction
+2025-04-12 03:36:10,011 - __main__ - INFO - User: 0x99f1ad08af12f51e337643ae8b224bee1a83f4f3 -> Transaction complete! b']\x1e\xad<2\xf6\x92\x92L\xc8\xb4\xff\x05H\xcdC\x8bU\xe0\xb65E\x99\x8d\x80\xbd{\x9e\xbf\tR\x12'
+2025-04-12 03:36:10,509 - __main__ - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Starting Blessing Transaction
+2025-04-12 03:36:12,274 - __main__ - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Transaction complete! b'\xa6~\xd7\xca\x17Rj=\x80Q\xe3\x19\xc7N.\x03\xcf\xd4\x11T|\n\x0e\xf6h\x1a\x96\xc8\x0b\x19\xca\xfc'
+2025-04-12 03:36:12,274 - __main__ - INFO - --------------------------------------------------------------------------------
