@@ -28,6 +28,7 @@ jobs:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
           RONIN_RPC: ${{ secrets.RONIN_RPC }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS}}
         run: python main.py
           
       - name: commit files
