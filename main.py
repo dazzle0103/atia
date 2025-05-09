@@ -54,7 +54,7 @@ if __name__ == "__main__":
         status = contract.functions.getActivationStatus(Web3.to_checksum_address(user)).call()
         if status[1] == False:
             tx_hash = contract.functions.activateStreak(Web3.to_checksum_address(user)).transact({'from': _from})
-            logger.info(f"User: {user} -> Transaction complete! URL:https://app.roninchain.com/tx/{tx_hash.hex()}")
+            logger.info(f"User: {user} -> Transaction complete! URL:https://app.roninchain.com/tx/0x{tx_hash.hex()}")
         else:
             logger.info(f"User: {user} -> Already blessed")
     logger.info('-' * 80)
