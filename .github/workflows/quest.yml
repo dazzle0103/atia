@@ -1,12 +1,12 @@
-name: run main.py
+name: run quest.py
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5 3 * * *' # At 03:05 every day UTC (at 03:00 bounty reset)
+    - cron: '0 2 * * *'
 
 jobs:
-  build:
+  run_quest:
     runs-on: ubuntu-latest
     steps:
 
@@ -29,17 +29,5 @@ jobs:
           RONIN_RPC: ${{ secrets.RONIN_RPC }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS}}
-        run: python main.py
-
-      - name: commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
-          
-      - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main 
+          MAVIS_API: ${{ secrets.MAVIS_API}}
+        run: python quest.py
