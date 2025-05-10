@@ -12,12 +12,18 @@ def isValid(date_str):
         return False
 
 def getListOfAddresses():
+    return getListOf('Address')
+
+def getListOfBearerToken():
+    return getListOf('BearerToken')
+
+def getListOf(header):
     try:
         scopes = [
             "https://www.googleapis.com/auth/spreadsheets",
             "https://www.googleapis.com/auth/drive"
         ]
-        #credentials = Credentials.from_service_account_file("xxx.json", scopes=scope)
+        #credentials = Credentials.from_service_account_file("axiescholar-458710-fa392456405b.json", scopes=scopes)
         service_account_info = json.loads(os.environ["GOOGLE_SHEETS_CREDENTIALS"])
         credentials = Credentials.from_service_account_info(service_account_info, scopes=scopes)
         client = gspread.authorize(credentials)
@@ -27,9 +33,9 @@ def getListOfAddresses():
         
         filtered_list = [
             entry for entry in list_of_dicts
-            if 'Enddate' in entry and 'Address' in entry and isValid(entry['Enddate'])
+            if 'Enddate' in entry and header in entry and isValid(entry['Enddate'])
         ]
-        return [entry['Address'] for entry in filtered_list]
+        return [entry[header] for entry in filtered_list]
     except Exception as e:
-        print(f"Error in getListOfAddresses: {e}")
+        print(f"Error in getListOf({header}): {e}")
         return []
