@@ -1,8 +1,26 @@
+import logging
+import logging.handlers
 import os
 from utils import getList
 
 import requests
 MAVIS_API = os.environ["MAVIS_API"]
+
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logger_file_handler = logging.handlers.RotatingFileHandler(
+    "quest.log",
+    maxBytes=1024 * 1024,
+    backupCount=1,
+    encoding="utf8",
+)
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+logger_file_handler.setFormatter(formatter)
+logger.addHandler(logger_file_handler)
+
+
+
 
 def verify_quest(userdata, quest_type, variant):
     
@@ -43,25 +61,24 @@ def verify_quest(userdata, quest_type, variant):
     if response.status_code == 200:
         data = response.json()
         if "errors" not in data:
-            #print(f"No errors {userdata['Address']} | {userdata['Name']}")
             quest = data["data"]["verifyQuest"] 
-            print(f"{quest['type']} - Status: {quest['status']}")
+            logger.info(f"{quest['type']} - Status: {quest['status']}")
             return data["data"]["verifyQuest"]
         else:
             if data['errors'][0]['message'] == 'Quest is already completed':
-                print(f'{quest_type} - Quest is already completed')
+                logger.info(f'{quest_type} - Quest is already completed')
             else:
-                print(f"Error: {data['errors']}")
+                logger.error(f"Error: {data['errors']}")
             return None
     else:
-        print(f"Error HTTP: {response.status_code} - {response.text}")
+        logger.error(f"Error HTTP: {response.status_code} - {response.text}")
         return None
 
 def main():
     ar = getList()
     for a in ar:
-        print('-'*50)
-        print(f"{a['Address']} | {a['Name']}")
+        logger.info('-' * 80)
+        logger.info(f"{a['Address']} | {a['Name']}")
         verify_quest(a, "PrayAtia", "0")
         verify_quest(a, "RollPouch", "0")
         verify_quest(a, "Win1ClassicBattle", "0")
