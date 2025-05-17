@@ -166,3 +166,24 @@
 2025-05-17 11:07:23,713 - __main__ - INFO - Win1OriginsBattle - Status: Open
 2025-05-17 11:07:23,899 - __main__ - INFO - FeedCocoOwnedAxie - Status: Open
 2025-05-17 11:07:23,899 - __main__ - INFO - --------------------------------------------------------------------------------
+2025-05-17 19:48:09,976 - utils - INFO - 0xd3daf3c63cc00b7e178985be0e446ba6f5dcece7 | amusedCamel
+2025-05-17 19:48:10,133 - utils - ERROR - Error: [{'message': 'Token Invalid', 'locations': [{'line': 1, 'column': 91}], 'path': ['verifyQuest'], 'extensions': {'code': 401002, 'type': 'UNAUTHENTICATED'}}]
+2025-05-17 19:48:10,269 - utils - ERROR - Error: [{'message': 'Token Invalid', 'locations': [{'line': 1, 'column': 91}], 'path': ['verifyQuest'], 'extensions': {'code': 401002, 'type': 'UNAUTHENTICATED'}}]
+2025-05-17 19:48:10,369 - utils - ERROR - Error: [{'message': 'Token Invalid', 'locations': [{'line': 1, 'column': 91}], 'path': ['verifyQuest'], 'extensions': {'code': 401002, 'type': 'UNAUTHENTICATED'}}]
+2025-05-17 19:48:10,467 - utils - ERROR - Error: [{'message': 'Token Invalid', 'locations': [{'line': 1, 'column': 91}], 'path': ['verifyQuest'], 'extensions': {'code': 401002, 'type': 'UNAUTHENTICATED'}}]
+2025-05-17 19:48:10,551 - utils - ERROR - Error: [{'message': 'Token Invalid', 'locations': [{'line': 1, 'column': 91}], 'path': ['verifyQuest'], 'extensions': {'code': 401002, 'type': 'UNAUTHENTICATED'}}]
+2025-05-17 19:48:10,552 - utils - INFO - --------------------------------------------------------------------------------
+2025-05-17 19:48:10,552 - utils - INFO - 0x99f1ad08af12f51e337643ae8b224bee1a83f4f3 | feistyTomato
+2025-05-17 19:48:10,633 - utils - ERROR - Error: [{'message': 'Token Invalid', 'locations': [{'line': 1, 'column': 91}], 'path': ['verifyQuest'], 'extensions': {'code': 401002, 'type': 'UNAUTHENTICATED'}}]
+2025-05-17 19:48:10,719 - utils - ERROR - Error: [{'message': 'Token Invalid', 'locations': [{'line': 1, 'column': 91}], 'path': ['verifyQuest'], 'extensions': {'code': 401002, 'type': 'UNAUTHENTICATED'}}]
+2025-05-17 19:48:10,820 - utils - ERROR - Error: [{'message': 'Token Invalid', 'locations': [{'line': 1, 'column': 91}], 'path': ['verifyQuest'], 'extensions': {'code': 401002, 'type': 'UNAUTHENTICATED'}}]
+2025-05-17 19:48:10,908 - utils - ERROR - Error: [{'message': 'Token Invalid', 'locations': [{'line': 1, 'column': 91}], 'path': ['verifyQuest'], 'extensions': {'code': 401002, 'type': 'UNAUTHENTICATED'}}]
+2025-05-17 19:48:10,998 - utils - ERROR - Error: [{'message': 'Token Invalid', 'locations': [{'line': 1, 'column': 91}], 'path': ['verifyQuest'], 'extensions': {'code': 401002, 'type': 'UNAUTHENTICATED'}}]
+2025-05-17 19:48:10,999 - utils - INFO - --------------------------------------------------------------------------------
+2025-05-17 19:48:10,999 - utils - INFO - 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 | wigglyCow
+2025-05-17 19:48:11,097 - utils - INFO - PrayAtia - Quest is already completed
+2025-05-17 19:48:11,197 - utils - INFO - RollPouch - Quest is already completed
+2025-05-17 19:48:11,292 - utils - INFO - Win1ClassicBattle - Quest is already completed
+2025-05-17 19:48:11,399 - utils - INFO - Win1OriginsBattle - Quest is already completed
+2025-05-17 19:48:11,494 - utils - INFO - FeedCocoOwnedAxie - Quest is already completed
+2025-05-17 19:48:11,495 - utils - INFO - --------------------------------------------------------------------------------
