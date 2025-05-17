@@ -5,7 +5,7 @@ from web3 import Web3
 from eth_account import Account
 from eth_account.signers.local import LocalAccount
 from web3.middleware import (SignAndSendRawMiddlewareBuilder, ExtraDataToPOAMiddleware)
-from .contracts.staking_abi import staking_abi, staking_address
+from contracts.staking_abi import staking_abi, staking_address
 from utils import getListOfValidatorAddresses
 
 logger = logging.getLogger(__name__)
