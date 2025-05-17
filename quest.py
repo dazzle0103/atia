@@ -77,12 +77,11 @@ def verify_quest(userdata, quest_type, variant):
 def main():
     ar = getList()
     for a in ar:
-        logger.info('-' * 80)
         logger.info(f"{a['Address']} | {a['Name']}")
         verify_quest(a, "PrayAtia", "0")
         verify_quest(a, "RollPouch", "0")
         verify_quest(a, "Win1ClassicBattle", "0")
         verify_quest(a, "Win1OriginsBattle", "0")
         verify_quest(a, "FeedCocoOwnedAxie", "0")
-
+        logger.info('-' * 80)
 main()

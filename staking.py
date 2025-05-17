@@ -5,13 +5,13 @@ from web3 import Web3
 from eth_account import Account
 from eth_account.signers.local import LocalAccount
 from web3.middleware import (SignAndSendRawMiddlewareBuilder, ExtraDataToPOAMiddleware)
-from contracts.atia_abi import atia_abi, atia_address
-from utils import getListOfAccountAddresses
+from .contracts.staking_abi import staking_abi, staking_address
+from utils import getListOfValidatorAddresses
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 logger_file_handler = logging.handlers.RotatingFileHandler(
-    "status.log",
+    "staking.log",
     maxBytes=1024 * 1024,
     backupCount=1,
     encoding="utf8",
@@ -37,7 +37,6 @@ except KeyError:
 
 
 if __name__ == "__main__":
-    _from = '0x5886Dc1c4F14C5ab8e0E77eb50A3aFE4B0b06761' #dev
     # assert private_key is not None, "You must set PRIVATE_KEY environment variable"
     # assert private_key.startswith("0x"), "Private key must start with 0x hex prefix"
     w3 = Web3(Web3.HTTPProvider(ronin_rpc))
@@ -45,15 +44,12 @@ if __name__ == "__main__":
     w3.middleware_onion.inject(ExtraDataToPOAMiddleware, layer=0)
     w3.middleware_onion.inject(SignAndSendRawMiddlewareBuilder.build(account), layer=0)
 
-    checksumAddress = Web3.to_checksum_address(atia_address)
-    contract = w3.eth.contract(address=checksumAddress, abi=atia_abi)
-    accounts = getListOfAccountAddresses()
+    checksumAddress = Web3.to_checksum_address(staking_address)
+    contract = w3.eth.contract(address=checksumAddress, abi=staking_abi)
+    list_of_validators = getListOfValidatorAddresses()
     
-    for user in accounts:
-        status = contract.functions.getActivationStatus(Web3.to_checksum_address(user)).call()
-        if status[1] == False:
-            tx_hash = contract.functions.activateStreak(Web3.to_checksum_address(user)).transact({'from': _from})
-            logger.info(f"User: {user} -> Transaction complete! URL:https://app.roninchain.com/tx/0x{tx_hash.hex()}")
-        else:
-            logger.info(f"User: {user} -> Already blessed")
-    logger.info('-' * 80)
+    delegateAddress = "0x56f2B69D8f20568f69Eb4107733a1a2ce7BBc0Bc" #fableborn
+
+    #tx_hash = contract.functions.delegateRewards(list_of_validators, delegateAddress).transact({'from': account.address})
+    #logger.info(f"Restaking complete! URL:https://app.roninchain.com/tx/0x{tx_hash.hex()}")
+    print(list_of_validators)

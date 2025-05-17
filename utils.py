@@ -11,13 +11,16 @@ def isValid(date_str):
         print(f"Invalid date format: {date_str}, error: {e}")
         return False
 
-def getListOfAddresses():
+def getListOfAccountAddresses():
     return getListOf('Address')
 
 def getListOfBearerToken():
     return getListOf('BearerToken')
 
-def getListOf(header):
+def getListOfValidatorAddresses():
+    return getListOf('Address',"Staking")
+
+def getListOf(header, worksheet="AtiaBlessing", workbook="Axies"):
     try:
         scopes = [
             "https://www.googleapis.com/auth/spreadsheets",
@@ -28,7 +31,7 @@ def getListOf(header):
         credentials = Credentials.from_service_account_info(service_account_info, scopes=scopes)
         client = gspread.authorize(credentials)
 
-        sheet = client.open("Axies").worksheet("AtiaBlessing")
+        sheet = client.open(workbook).worksheet(worksheet)
         list_of_dicts = sheet.get_all_records()
         
         filtered_list = [
@@ -40,7 +43,7 @@ def getListOf(header):
         print(f"Error in getListOf({header}): {e}")
         return []
 
-def getList():
+def getList(worksheet="AtiaBlessing", workbook="Axies"):
     try:
         scopes = [
             "https://www.googleapis.com/auth/spreadsheets",
@@ -51,14 +54,14 @@ def getList():
         credentials = Credentials.from_service_account_info(service_account_info, scopes=scopes)
         client = gspread.authorize(credentials)
 
-        sheet = client.open("Axies").worksheet("AtiaBlessing")
+        sheet = client.open(workbook).worksheet(worksheet)
         list_of_dicts = sheet.get_all_records()
         
         filtered_list = [
             entry for entry in list_of_dicts
             if 'Enddate' in entry and isValid(entry['Enddate'])
         ]
-        return [entry for entry in filtered_list]
+        return filtered_list
     except Exception as e:
         print(f"Error in getList(): {e}")
         return []

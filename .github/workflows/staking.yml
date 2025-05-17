@@ -1,9 +1,9 @@
-name: run main.py #atia blessing
+name: run staking.py #Delegate Staking Rewards
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5 3 * * *' # At 03:05 every day UTC (at 03:00 bounty reset)
+    - cron: '0 12 * * 6' # At 12:00 every Saturday 
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
           RONIN_RPC: ${{ secrets.RONIN_RPC }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS}}
-        run: python main.py
+        run: python staking.py
 
       - name: commit files
         run: |
