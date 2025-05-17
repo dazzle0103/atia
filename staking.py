@@ -5,7 +5,7 @@ from web3 import Web3
 from eth_account import Account
 from eth_account.signers.local import LocalAccount
 from web3.middleware import (SignAndSendRawMiddlewareBuilder, ExtraDataToPOAMiddleware)
-from contracts.staking_abi import staking_abi, staking_address
+from contracts.staking_abi import ronin_staking_abi, ronin_staking_address
 from utils import getListOfValidatorAddresses
 
 logger = logging.getLogger(__name__)
@@ -44,8 +44,8 @@ if __name__ == "__main__":
     w3.middleware_onion.inject(ExtraDataToPOAMiddleware, layer=0)
     w3.middleware_onion.inject(SignAndSendRawMiddlewareBuilder.build(account), layer=0)
 
-    checksumAddress = Web3.to_checksum_address(staking_address)
-    contract = w3.eth.contract(address=checksumAddress, abi=staking_abi)
+    checksumAddress = Web3.to_checksum_address(ronin_staking_address)
+    contract = w3.eth.contract(address=checksumAddress, abi=ronin_staking_abi)
     list_of_validators = getListOfValidatorAddresses()
     
     delegateAddress = "0x56f2B69D8f20568f69Eb4107733a1a2ce7BBc0Bc" #fableborn
