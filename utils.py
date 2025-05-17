@@ -86,7 +86,7 @@ def getListOfValidatorAddresses():
 
 def getListOf(header, worksheet="AtiaBlessing", workbook="Axies"):    
         filtered_list = [
-            entry for entry in getData(workbook, worksheet)
+            entry for entry in getData(worksheet, workbook)
             if 'Enddate' in entry and header in entry and isValid(entry['Enddate'])
         ]
         return [entry[header] for entry in filtered_list]
