@@ -2,8 +2,8 @@ name: run staking.py #Delegate Staking Rewards
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 12 * * 6' # At 12:00 every Saturday 
+  #schedule:
+    #- cron: '0 12 * * 6' # At 12:00 every Saturday 
 
 jobs:
   build:
