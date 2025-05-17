@@ -1,0 +1,2 @@
+axieConsumeableConsumer_address = '0xeaa3d9af9c9c218dae63922c97eeee6c3f770e15'
+axieConsumeableConsumer_abi = '[{"constant":false,"inputs":[{"name":"axieId","type":"uint256"},{"name":"consumableId","type":"uint256"},{"name":"amount","type":"uint256"}],"name":"consume","outputs":[],"stateMutability":"nonpayable","type":"function"}]'
