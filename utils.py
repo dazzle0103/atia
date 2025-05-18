@@ -106,3 +106,20 @@ def getList(worksheet="AtiaBlessing", workbook="Axies"):
     except Exception as e:
         print(f"Error in getList(): {e}")
         return []
+
+
+def updateGoogleSheet(account, accessToken, refreshToken, worksheet, workbook):
+    try:
+        client = loginGoogle()
+        sheet = client.open(workbook).worksheet(worksheet)
+        accessToken_column_number = sheet.find('BearerToken').col
+        refreshToken_column_number = sheet.find('RefreshToken').col
+        # Find the row containing the search value
+        row_number = sheet.find(account).row
+        sheet.update_cell(row_number, accessToken_column_number, accessToken)  # Column B
+        sheet.update_cell(row_number, refreshToken_column_number, refreshToken)  # Column C
+        print("Done Update sheet")
+    except Exception as e:
+        print(f"Value not found in the sheet. Error: {e}")
+
+
