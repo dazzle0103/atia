@@ -91,3 +91,7 @@
 2025-05-17 19:46:54,967 - utils - INFO - User: 0x99f1ad08af12f51e337643ae8b224bee1a83f4f3 -> Already blessed
 2025-05-17 19:46:55,271 - utils - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Already blessed
 2025-05-17 19:46:55,271 - utils - INFO - --------------------------------------------------------------------------------
+2025-05-18 03:50:09,994 - utils - INFO - User: 0xd3daf3c63cc00b7e178985be0e446ba6f5dcece7 -> Transaction complete! URL:https://app.roninchain.com/tx/0x533d65d88f6131cb4d3fb720505c37a8a87e1d4804f542e679fef965508190e9
+2025-05-18 03:50:11,638 - utils - INFO - User: 0x99f1ad08af12f51e337643ae8b224bee1a83f4f3 -> Transaction complete! URL:https://app.roninchain.com/tx/0xec40806087bbb8a3746eda3e84dbf7dde3e48a2b8910df20e2fc15824821cca0
+2025-05-18 03:50:13,323 - utils - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Transaction complete! URL:https://app.roninchain.com/tx/0xee7e14abc236db039831f47415b403faeb0c293aa67d53c0eb3053f57615ac11
+2025-05-18 03:50:13,323 - utils - INFO - --------------------------------------------------------------------------------
