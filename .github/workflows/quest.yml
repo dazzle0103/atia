@@ -2,8 +2,8 @@ name: run quest.py
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '5 1 * * *'
+  #schedule:
+  #  - cron: '5 1 * * *'
 
 jobs:
   run_quest:
