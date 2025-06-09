@@ -179,3 +179,7 @@
 2025-06-08 03:56:59,903 - utils - INFO - User: 0x99f1ad08af12f51e337643ae8b224bee1a83f4f3 -> Transaction complete! URL:https://app.roninchain.com/tx/0x3b4963c9f965cda53828bd111283b55ed83d02208f0baceeaefcdd91ebf4b44f
 2025-06-08 03:57:01,009 - utils - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Transaction complete! URL:https://app.roninchain.com/tx/0x8e22a6a0969dd9c350e8ff276a2a32bec591a76c5249b0276e933da367cfa926
 2025-06-08 03:57:01,009 - utils - INFO - --------------------------------------------------------------------------------
+2025-06-09 03:56:12,092 - utils - INFO - User: 0xd3daf3c63cc00b7e178985be0e446ba6f5dcece7 -> Transaction complete! URL:https://app.roninchain.com/tx/0x357b503a4a1e4371e4bc9ced3b1dcca2795e40c9c2534e569f609aa1db6cf118
+2025-06-09 03:56:13,628 - utils - INFO - User: 0x99f1ad08af12f51e337643ae8b224bee1a83f4f3 -> Transaction complete! URL:https://app.roninchain.com/tx/0x8645f5c6c7bc83be54abb0cb206542f4c0f8f9ca40098579b4844730977cd22a
+2025-06-09 03:56:15,297 - utils - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Transaction complete! URL:https://app.roninchain.com/tx/0xc5af42dba3439ec36d5359d656380461e08f1641ce42672ea5b511fe517abc59
+2025-06-09 03:56:15,297 - utils - INFO - --------------------------------------------------------------------------------
