@@ -914,3 +914,7 @@
 2025-12-20 03:53:16,229 - utils - INFO - User: 0x99f1ad08af12f51e337643ae8b224bee1a83f4f3 -> Transaction complete! URL:https://app.roninchain.com/tx/0xf403e0a2ce692c94c22983983464623d05af6cfa959da49b2519ea404b392037
 2025-12-20 03:53:17,772 - utils - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Transaction complete! URL:https://app.roninchain.com/tx/0xd472e9b91f67c08fd4d64857c161a7e970409a8544551f5575218e4aa9a5d9fe
 2025-12-20 03:53:17,772 - utils - INFO - --------------------------------------------------------------------------------
+2025-12-21 04:05:00,778 - utils - INFO - User: 0xd3daf3c63cc00b7e178985be0e446ba6f5dcece7 -> Transaction complete! URL:https://app.roninchain.com/tx/0x06e3278a18476c8eda179cb8a8b42f22846d8abc5d1ff968ba5697ba5022776d
+2025-12-21 04:05:02,226 - utils - INFO - User: 0x99f1ad08af12f51e337643ae8b224bee1a83f4f3 -> Transaction complete! URL:https://app.roninchain.com/tx/0xb403603b79d80baf3e3134b433a6d7aebea1904a6f145bf02971192d25df3c01
+2025-12-21 04:05:03,644 - utils - INFO - User: 0xf57a14a0a2c9e1836f8cfc249516ec2b01b80182 -> Transaction complete! URL:https://app.roninchain.com/tx/0x5e40540b62d13256db69ffb649aed44b5ff87e96e5b6899ee1c08a172d9651da
+2025-12-21 04:05:03,644 - utils - INFO - --------------------------------------------------------------------------------
